@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--title es el titulo de la pagina, el que sale en la parte
+        de arroba del navegador-->
         <title>Mi primera web</title>
     </head>
     <body>
@@ -16,9 +18,27 @@
 
 
 
+        <!--form es un formulario, que se puede usar para insertar datos
+        y enviarlos a un servidor-->
         <form action="/formulario" method="POST">
+            <!--label y input van de la mano. label seria el texto a la
+            izquierda de la etiqueta 'input'.
+            El valor del atributo 'for' en la etiquela label debe ser el 
+            mismo que el atributo 'id' de la etiqueta input.-->
             <label for="nombre">Nombre</label>
+            <!--la etiqueta input crea un campo donde el usuario puede
+            crear varias cosas dependiendo del valor que se le asigne al
+            atributo 'type'. Por ejemplo, ' type="text" ' crea un cuadro
+            donde el usuario puede ingresar texto alfanumerico;
+            type="button" crea un boton y el nombre que aparece sobre dicho
+            botón es el valor del atributo 'value'; type="radio" crea un botón
+            circular para seleccionar (como cuando hay una pregunta de
+            seleccion multiple). El atributo 'name' es el nombre que recibirá
+            el formulario en su archivo. El atributo 'placeholder' hace que
+            aparezca un texto por defecto cuando ' type="text" ', pero que
+            dicho texto desaparece cuando empezamos a escribir-->
             <input value="chanchito" type="text" id="nombre" name="nombre" placeholder="Chanchito feliz...." />
+            <!--br nos crea un salto de linea-->
             <br>
             <label for="apellido">Apellido</label>
             <input value="feliz" type="text" id="apellido" name="apellido" placeholder="Chanchito triste..">
