@@ -1,4 +1,4 @@
-#titulo{
+/* #titulo{
     color: tomato;
 }
 p.texto{
@@ -9,11 +9,41 @@ p.especial{
 }
 div p{
     color: aquamarine;
+    border: 55px;
 }
 div h2, div h3{
     color: brown;
 }
+div h2{
+    border-color: aqua;
+    
+}
 *{
     font-size: 24px;
     color: black;
+} */
+.color{
+    /* color: aquamarine; */
+    /* border: 2px red outset; */
+    width: 250px;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 5px;
+    border-width: 3px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-right-width: 3px;
+}
+#fondo{
+    background-color: rgba(255, 0, 0);
+    /* opacity le da transparencia al elemento completo */
+    /* opacity: 0.5; */
+    height: 200px;
+    background-image: url('holabeats.png');
+    background-size: 300px;
+    background-repeat: repeat-y;
+    background-position: left top;
+    
 }

@@ -1,0 +1,19 @@
+#header_main{
+     border: 60px;
+     border-color: black;
+}
+div.logo{
+    /* margin-left: 50px; */
+}
+div.search_bar{
+    position: absolute;
+    margin-left: 220px;
+    margin-top: -35px;
+}
+div input{
+    background-color: aliceblue;
+    border: 0px;
+    border-radius: 6px;
+    height: 25px;
+    padding-left: 100px;
+}
