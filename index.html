@@ -1,165 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!--title es el titulo de la pagina, el que sale en la parte
-        de arroba del navegador-->
-        <title>Mi primera web</title>
-        <style>
-            table, th, td {
-                border: 1px solid black;
-            }
-        </style>
-    </head>
-    <body>
-        
-        <table style="width: 500px;">
-            <!--thead sirve para identifica/agrupar elementos que se encuentran en la cabezera
-                de nuestras tablas-->
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Precio</th>
-                </tr>
-            </thead>
-            <!--tbody sirva para identificar/agrupar todas las filas que pertenecen al
-                cuerpo de nuestra tabla -->
-            <tbody>
-                <tr>
-                     <!--td se utiliza para poder definir elementos estandares que se encuentran
-                    dentro de las celdas de nuestra tabla-->
-                     <td>Hola beats</td>
-                     <td>Gratis</td>
-                </tr>
-                <tr>
-                     <!--td se utiliza para poder definir elementos estandares que se encuentran
-                     dentro de las celdas de nuestra tabla-->
-                     <td>Chanchito Feliz</td>
-                     <td>19.90$</td>
-                </tr>
-                <tr>
-                    <!--td se utiliza para poder definir elementos estandares que se encuentran
-                    dentro de las celdas de nuestra tabla-->
-                    <td>Chanchito Feliz muy feliz</td>
-                    <td>29.90$</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <td></td>
-                <td>Total: 49.80$</td>
-            </tfoot>
-        </table>
-
-        <!--ul es lista no ordenada-->
-        <ul>
-            <!--li es List Item o Item de la Lista. Si le añadimos el atributo
-            'value' podemos indicar desde que numero queremos que empiece la lista.
-            Es decir, si value="50", el primer elemento de la lista será el numero 50-->
-            <li>Elelemto 1</li>
-            <li>Elelemto 2</li>
-            <li>Elelemto 3</li>
-            <li>Elelemto 4</li>
-            
-        </ul>
-
-        <!--ol es lista ordenada-->
-        <ol>
-            <li>Elelemto 1</li>
-            <li>Elelemto 2</li>
-            <li>Elelemto 3</li>
-            <li>Elelemto 4</li>
-            <!--aqui un ejemplo de anidacion de listas. De esta maner podemos crear
-            una jerarquia-->
-            <li>Elemento 5<br>
-                <ol> 
-                    <!--style nos permite añadiralgo asi como una especie de viñeta.
-                    dependiendo el style se puede usar numeros romanos, cuadrados, circulos, 
-                    etc, para listar los elementos.-->  
-                    <li style="list-style: lower-roman;">Sub elemento 1</li>
-                    <li style="list-style: lower-roman;">Sub elemento 2</li>
-                    <li style="list-style: lower-roman;">Sub elemento 3</li>
-                    <li style="list-style: lower-roman;">Sub elemento 4</li>
-                </ol>
-            </li>
-        </ol>
-
-
-
-
-        <!--form es un formulario, que se puede usar para insertar datos
-        y enviarlos a un servidor. El atributo 'method' se usa para indicar
-        cual es el metodo que se utilizará para enviar los datos al servidor.
-        'POST' los envia a traves de la cabezera y 'GET' los envia a traves
-        de la web-->
-        <form action="/formulario" method="POST">
-            <!--label y input van de la mano. label seria el texto a la
-            izquierda de la etiqueta 'input'.
-            El valor del atributo 'for' en la etiquela label debe ser el 
-            mismo que el atributo 'id' de la etiqueta input.-->
-            <label for="nombre">Nombre</label>
-            <!--la etiqueta input crea un campo donde el usuario puede
-            crear varias cosas dependiendo del valor que se le asigne al
-            atributo 'type'. Por ejemplo, ' type="text" ' crea un cuadro
-            donde el usuario puede ingresar texto alfanumerico;
-            type="button" crea un boton y el nombre que aparece sobre dicho
-            botón es el valor del atributo 'value'; type="radio" crea un botón
-            circular para seleccionar (como cuando hay una pregunta de
-            seleccion multiple). El atributo 'name' es el nombre que recibirá
-            el formulario en su archivo. El atributo 'placeholder' hace que
-            aparezca un texto por defecto cuando ' type="text" ', pero que
-            dicho texto desaparece cuando empezamos a escribir. El atributo
-            'value' lo usamos para indicar un valor por defecto, es decir, que
-            un type="text" tenga un mensaje predeterminado, mostrando este by default-->
-            <input value="chanchito" type="text" id="nombre" name="nombre" placeholder="Chanchito feliz...." />
-            <!--br nos crea un salto de linea-->
-            <br>
-            <label for="apellido">Apellido</label>
-            <input value="feliz" type="text" id="apellido" name="apellido" placeholder="Chanchito triste..">
-            <br>
-            <label for="comentario">Comentario</label>
-            <!--textarea es similar a input con el atributo ' type="text" '.
-            Con los atributos 'rows' y 'cols' podemos especificar las dimensiones.
-            Para asignar un valor por defecto a la etiqueta '<textarea>' no usamos
-            el atributo 'value', sino que lo ponemos entre la apertura y el cierre
-            de la etiqueta-->
-            <textarea cols="50" id="comentario" placeholder="ingrese comentario" name="comentario">Este es un valor por defecto</textarea>
-            <br>
-            <!--button nos sirve para crear botones. Cuando se usa esta etiqueta
-            hay que especificar el tipo de boton con el atributo 'type'. Por defecto,
-            si no se especifica el tipo de boton, este tomara el valor de 'submit'
-            Es decir, por defecto, es como si esta etiqueta viniese con ' type="submit"
-            ya aplicado, pero debemos de ser explicitos y siempre incluirlo manualmente.
-            'submit' es para enviar el formulario a la ruta que le indicamos en el atributo
-            'action' y con el metodo que indicamos en el atributo 'method';
-            'reset' es para dejar el formulario con sus valores por defeto;
-            'button' se usa para cuando queramos que el boton haga una funcion especifica. 
-            Aqui hay que usar JavaScipt para configurarlo. 
-        
-            Una ventaja es que podemos incluir mas etiquetas tendro de las etiquetas
-            'button', como la etiqueta <img>, por ejemplo.-->
-            <button type="button">Tipo boton</button>
-            <button type="reset">Tipo reset</button>
-            <button type="submit">Tipo submit</button>
-
-        </form>
-        <h1>Mi primer heading</h1>
-        <h2>Mi segundo heading</h2>
-        <h3>Mi tercer heading</h3>
-        <h4>Mi cuarto heading</h4>
-        <h5>Mi quinto heading</h5>
-        <h6>Chanchito feliz</h6>
-        <p>Chanchito feliz esta muy feliz.</p>
-        <p>Chanchito triste esta muy triste</p>
-        <hr>
-        <h2>Chanchito felipe</h2>
-        <p>
-            Este texto es <span style="color:blue">mucho mas largo</span>
-            y es para mostrar <br>
-            la etiqueta span!
-        </p>
-        <!-- este texto es un comentario y no va a aparecer en el explorador -->
-        <a target="_blank" href="https://www.google.com">Ir a Google</a>
-        <img src="img/img.png" height="400" />
-        
-
-    </body>
+<head>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/slyle.css">
+</head>
+<body>
+    <header id="test">
+        <h1 id="titulo">Blog de Maikel</h1>
+    </header>
+    <section class="container">
+        <!--article se usa para poder definir contenido completamente independiente-->
+        <article class="post">
+            <h2>Titulo de mi post</h2>
+            <p>Descripcion de mi post</p>
+            <img src="/img/img.png" width="100"/>
+            <p>Texto del articulo que hay aca y es texto de prueba. Chanchito feliz</p>
+        </article>
+        <article class="post">
+            <h2>Titulo de mi post 2</h2>
+            <p>Descripcion de mi post 2</p>
+            <img src="/img/img2.png" width="100"/>
+            <p>Texto del articulo que hay aca y es texto de prueba. Chanchito feliz</p>
+        </article>
+        <article class="post">
+            <h2>Titulo de mi post 3</h2>
+            <p>Descripcion de mi post 3</p>
+            <img src="/img/ok.png" width="100"/>
+            <p>Texto del articulo que hay aca y es texto de prueba. Chanchito feliz</p>
+        </article>
+    </section>
+    <footer>
+        <section>
+            <a href="#titulo">Ir arriba</a>
+            <a href="mailto:nicolas@gmail.com">Contactame aqui</a>
+        </section>
+        <p>Copyright 2022</p>
+    </footer>
+</body>
 </html>

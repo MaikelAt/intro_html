@@ -1,14 +1,19 @@
 #header_main{
+    width: 100%;
      border: 60px;
      border-color: black;
 }
 div.logo{
     /* margin-left: 50px; */
+    width: 15%;
 }
 div.search_bar{
-    position: absolute;
+    /* position: absolute;
     margin-left: 220px;
-    margin-top: -35px;
+    margin-top: -35px; */
+    width: 25%;
+    position: static;
+
 }
 div input{
     background-color: aliceblue;

@@ -18,10 +18,11 @@ div h2{
     border-color: aqua;
     
 }
+*/
 *{
     font-size: 24px;
-    color: black;
-} */
+    /* color: black; */
+} 
 .color{
     /* color: aquamarine; */
     /* border: 2px red outset; */
@@ -38,12 +39,80 @@ div h2{
 }
 #fondo{
     background-color: rgba(255, 0, 0);
-    /* opacity le da transparencia al elemento completo */
+    /* opacity le da transparencia al elemento completo. Cero es invisible y 1 completamente visible */
     /* opacity: 0.5; */
     height: 200px;
-    background-image: url('holabeats.png');
-    background-size: 300px;
-    background-repeat: repeat-y;
-    background-position: left top;
+    width: 200px;
+    background: #f00 url(/css/holabeats.png) repeat-y center bottom / 100px 100px;
+}
+.margen{
+    background-color: chocolate;
+    margin: 15px;
+    padding: 30px 15px;
+    border: solid 1px black;
+    height: 200px;
+    width: 50px;
+    overflow: scroll;
+    outline: 1px solid red;
     
+}
+.text{
+    font-family: 'Roboto', sans-serif;
+    
+    text-align: justify;
+    text-decoration: overline;
+    text-shadow: 2px 1px 2px red;
+}
+a:link{
+    color: blueviolet;
+}
+a:visited{
+    color: grey;
+}
+a:hover{
+    color: yellow;
+}
+a:active{
+    color: red;
+}
+ul{
+    background-color: rgba(0, 255, 255, 0.25);
+    list-style-type: circle;
+    /* list-style-position: inside; */
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td{
+    border: solid 1px #eee;
+    padding: 5px;
+}
+th{
+    background-color: tomato;
+    color: white;
+    text-align: left;
+}
+tr:nth-child(even){
+    background-color: #eee;
+}
+tr:hover{
+    background-color: #aaa;
+    cursor: pointer;
+}
+span{
+    display: block;
+    /* display: none; */
+    /* visibility: hidden; */
+    max-width: 600px;
+    background-color: red;
+}
+.in-line{
+    display: inline;
+}
+#position{
+    position: sticky;
+    left: 20px;
+    top: 25px;
+
 }
